@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+
+$primaryColor: #fc00ff;
+$success: #2ecc71;
+$error: #e74c3c;
+$bgGrad: linear-gradient(90deg, #00dbde 0%, $primaryColor 100%);
+
+:root {
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: $bgGrad;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #eee;
+  padding: 20px;
+}
+
+.form {
+  padding: 20px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control i img {
+  width: 20px;
+  height: 20px;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form button {
+  background-color: $primaryColor;
+  border: 2px solid $primaryColor;
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Error and Success */
+
+.form-control.success input {
+  border-color: $success;
+}
+
+.form-control.error input {
+  border-color: $error;
+}
+
+.form-control.success i.fas.fa-check-circle {
+  color: $success;
+  visibility: visible;
+}
+
+.form-control.error i.fas.fa-exclamation-circle {
+  color: $error;
+  visibility: visible;
+}
+
+.form-control.error small {
+  color: $error;
+  visibility: visible;
+}
+
+footer {
+  margin: 10px;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
